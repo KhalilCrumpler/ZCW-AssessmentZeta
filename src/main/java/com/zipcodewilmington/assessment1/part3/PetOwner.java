@@ -14,6 +14,7 @@ public class PetOwner {
      */
     public String name;
     public Pet[] pets;
+    public Integer len = 0;
     public PetOwner(String name, Pet... pets) {
         this.name = name;
         this.pets = pets;
@@ -24,13 +25,14 @@ public class PetOwner {
      */
     public void addPet(Pet pet) {
 
+
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-        
+
     }
 
     /**
@@ -39,7 +41,7 @@ public class PetOwner {
      */
     public Boolean isOwnerOf(Pet pet) {
 
-    return pet.owner.name == this.name;
+    return Arrays.asList(this.pets).contains(pet);
     }
 
     /**
