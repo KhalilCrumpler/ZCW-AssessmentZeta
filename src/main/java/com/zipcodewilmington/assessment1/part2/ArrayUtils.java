@@ -70,20 +70,8 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Integer getLeastCommon(Integer[] objectArray) {
-        int leastOccurences = 1000000;
-        int temp = 0;
-        int leastCommon = 0;
-        int number = 0;
-        for(int i = 0; i <= objectArray.length; i++){
-            temp = getNumberOfOccurrences(objectArray, objectArray[i]);
-            if(temp < leastOccurences){
-                leastOccurences = temp;
-                number = objectArray[i];
-            }
-            objectArray = (Integer[]) removeValue(objectArray, objectArray[i]);
-        }
 
-        return number;
+        return null;
     }
 
     /**
