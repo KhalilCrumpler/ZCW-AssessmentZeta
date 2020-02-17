@@ -9,7 +9,7 @@ public class PetOwner {
      * @param pets array of Pet object
      */
     public String name;
-    public Pet pets;
+    public Pet[] pets;
     public PetOwner(String name, Pet... pets) {
         this.name = name;
         this.pets = pets;
@@ -19,7 +19,7 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-        int len = this.pets.length;
+
 
     }
 
@@ -36,7 +36,7 @@ public class PetOwner {
      */
     public Boolean isOwnerOf(Pet pet) {
 
-        return this.pets;
+    return null;
     }
 
     /**
