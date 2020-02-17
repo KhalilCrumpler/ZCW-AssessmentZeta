@@ -8,13 +8,19 @@ public class PetOwner {
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+    public String name;
+    public Pet pets;
     public PetOwner(String name, Pet... pets) {
+        this.name = name;
+        this.pets = pets;
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        int len = this.pets.length;
+
     }
 
     /**
@@ -29,7 +35,8 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+
+        return this.pets;
     }
 
     /**
@@ -54,27 +61,29 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-        return null;
+       return null;
     }
 
     /**
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+
+        return this.pets.length;
     }
 
     /**
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+
+        return this.name;
     }
 
     /**
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return this.pets;
     }
 }
