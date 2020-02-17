@@ -1,5 +1,9 @@
 package com.zipcodewilmington.assessment1.part3;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -20,14 +24,13 @@ public class PetOwner {
      */
     public void addPet(Pet pet) {
 
-
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
+        
     }
 
     /**
@@ -36,14 +39,21 @@ public class PetOwner {
      */
     public Boolean isOwnerOf(Pet pet) {
 
-    return null;
+    return pet.owner.name == this.name;
     }
 
     /**
      * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
      */
     public Integer getYoungetPetAge() {
-        return null;
+        int youngest = 1000;
+        int len = this.pets.length;
+        for(int i = 0; i < len; i++){
+            if(this.pets[i].age < youngest){
+                youngest = pets[i].age;
+            }
+        }
+        return youngest;
     }
 
 
@@ -53,7 +63,14 @@ public class PetOwner {
      * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
      */
     public Integer getOldestPetAge() {
-        return null;
+        int oldest = 0;
+        int len = this.pets.length;
+        for(int i = 0; i < len; i++){
+            if(this.pets[i].age > oldest){
+                oldest = pets[i].age;
+            }
+        }
+        return oldest;
     }
 
 
@@ -61,7 +78,12 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-       return null;
+       int len = this.pets.length;
+       int sum = 0;
+       for(int i = 0; i < len; i++){
+           sum += this.pets[i].age;
+       }
+       return (float) sum/len;
     }
 
     /**
