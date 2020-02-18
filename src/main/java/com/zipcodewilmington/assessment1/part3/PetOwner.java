@@ -13,7 +13,7 @@ public class PetOwner {
      * @param pets array of Pet object
      */
     public String name;
-    public Pet[] pets;
+    public Pet[] pets = new Pet[100];
     public Integer len = 0;
     public PetOwner(String name, Pet... pets) {
         this.name = name;
@@ -27,6 +27,8 @@ public class PetOwner {
 
 
     }
+
+
 
     /**
      * @param pet pet to be removed from the composite collection Pets

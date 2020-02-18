@@ -49,7 +49,6 @@ public class ArrayUtils {
     public static Integer getMostCommon(Integer[] objectArray) {
         int mostOccurences = 0;
         int temp = 0;
-        int mostCommon = 0;
         int number = 0;
         for(int i = 0; i < objectArray.length; i++){
             temp = getNumberOfOccurrences(objectArray, objectArray[i]);
@@ -57,7 +56,7 @@ public class ArrayUtils {
                 mostOccurences = temp;
                 number = objectArray[i];
             }
-            objectArray = (Integer[]) removeValue(objectArray, objectArray[i]);
+
         }
 
         return number;
@@ -70,8 +69,19 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Integer getLeastCommon(Integer[] objectArray) {
+        int mostOccurences = 100;
+        int temp = 0;
+        int number = 0;
+        for(int i = 0; i < objectArray.length; i++){
+            temp = getNumberOfOccurrences(objectArray, objectArray[i]);
+            if(temp < mostOccurences){
+                mostOccurences = temp;
+                number = objectArray[i];
+            }
+        }
 
-        return null;
+        return number;
+
     }
 
     /**
