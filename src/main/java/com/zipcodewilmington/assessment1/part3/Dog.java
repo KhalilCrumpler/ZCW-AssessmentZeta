@@ -8,7 +8,7 @@ public class Dog extends Pet {
      * @param name name of this Dog
      * @param age age of this dog
      */
-
+    public String name = "Dog name";
     public Dog(String name, Integer age) {
         this.name = name;
         this.age = age;
